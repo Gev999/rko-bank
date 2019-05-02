@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="page-2.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Page 2</title>
+</head>
+
+<body>
+    <div class="container" id="filter-page">
+        <div class="block-title">
+            <h2>Тарифы банков на открытие расчетного счета для ИП и ООО</h2>
+            <h3>с самыми выгодными условиями в России</h3>
+        </div>
+        <div class="row filter-block">
+            <div class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">Планируемый ежемесячный оборот</p>
+                <select class="form-control form-select" id="sel1">
+                    <option>Не важно</option>
+                    <option>До 10 000 р.</option>
+                    <option>До 100 000 р.</option>
+                    <option>До 1 000 000 р.</option>
+                    <option>Более 1 000 000 р.</option>
+                </select>
+            </div>
+            <div class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">Интернет-банкинг</p>
+                <div id="inetBtns" class="btn-group btn-select">
+                    <button type="button" class="btn btn-outline-primary">Да</button>
+                    <button type="button" class="btn btn-outline-primary">Нет</button>
+                    <button type="button" class="btn btn-primary">Не важно</button>
+                </div>
+            </div>
+            <div class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">SMS-информирование</p>
+                <div id="smsBtns" class="btn-group btn-select">
+                    <button type="button" class="btn btn-outline-primary">Да</button>
+                    <button type="button" class="btn btn-outline-primary">Нет</button>
+                    <button type="button" class="btn btn-primary">Не важно</button>
+                </div>
+            </div>
+            <div class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">Количество исходящих платежей</p>
+                <select class="form-control form-select" id="sel2">
+                    <option>Не важно</option>
+                    <option>До 10 шт.</option>
+                    <option>До 100 шт.</option>
+                    <option>От 100 шт.</option>
+                </select>
+            </div>
+            <div id="btn-mobile" class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">Мобильный банкинг</p>
+                <div id="mobileBtns" class="btn-group btn-select">
+                    <button type="button" class="btn btn-outline-primary">Да</button>
+                    <button type="button" class="btn btn-outline-primary">Нет</button>
+                    <button type="button" class="btn btn-primary">Не важно</button>
+                </div>
+            </div>
+            <div id="btn-rate" class="filter-item col-sm-6 col-md-4">
+                <p class="item-title">% на остаток по счёту</p>
+                <div id="rateBtns" class="btn-group btn-select">
+                    <button type="button" class="btn btn-outline-primary">Да</button>
+                    <button type="button" class="btn btn-outline-primary">Нет</button>
+                    <button type="button" class="btn btn-primary">Не важно</button>
+                </div>
+            </div>
+            <div class="col-12 btn-submit">
+                <button class="btn-filter">ПОДОБРАТЬ РАСЧЁТНЫЙ СЧЁТ</button>
+            </div>
+        </div>
+
+        <!-- bank cards-->
+        <div class="row bank-cards" id="bank-cards">
+            <div class="cards-title block-title col-12">
+                <h2>Лучшие банки для открытия счета</h2>
+            </div>
+            <!-- bank cards code -->
+            <!-- example -->
+            <!-- <div class="bank-card">
+                <div class="card-logo">
+                    <img src="../bank-logo/tochka.png" />
+                </div>
+                <div class="card-content">
+                    <h3>Расчётный счёт в банке Точка</h3>
+                    <div class="card-info">
+                        <p>Открытие счета: 0 рублей;</p>
+                        <p>Обслуживание: от 0 р/мес.;</p>
+                        <p>Много бонусов!</p>
+                    </div>
+                    <div>
+                        <button class="read-more">Подробные условия</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Banks with less favorable terms block -->
+        <div class="row bank-cards" id="bank-cards-less">
+            <div class="cards-title block-title col-12">
+                <h2 class="show-blocks" id="show-blocks"><span>Показать менее выгодные</span></h2>
+                <!-- <h2>Банки с менее выгодными условиями</h2> -->
+            </div>
+            <!-- bank cards code -->
+        </div>
+
+    </div>
+    <script src="../jquery.js"></script>
+    <script src="page-2.js"></script>
+</body>
+
+</html>

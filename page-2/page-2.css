@@ -1,0 +1,424 @@
+ #filter-page {
+    margin-top: 20px;
+    width: 80%!important;
+    font-family: 'Roboto', 'sans-serif'!important;
+} 
+
+.block-title h2, .block-title h3 {
+    text-align: center;
+}
+
+.block-title h2 {
+    font-size: 2vw;
+}
+
+.block-title h3 {
+    font-size: 1.5vw;
+}
+
+.filter-block {
+    width: 100%;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.filter-item {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-filter {
+    transition: .5s;
+    cursor: pointer;
+}
+.item-title {
+    font-size: 1.3vw;
+}
+
+.form-select, .form-select:focus {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align-last: center;
+    padding-right: 29px;
+
+}
+
+.form-select:hover {
+    cursor: pointer;
+}
+
+.btn-select {
+    width: 90%;
+}
+
+.btn-select button {
+    font-size: 1.3vw;
+}
+
+.btn-select button:hover {
+    background-color:#ffffff;
+    color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #007bff!important;
+    color: #ffffff!important;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-submit button {
+    width: 30%;
+    height: 40px;
+    background-color: #fdd303;
+    border-radius: 20px;
+    box-shadow: 8.2px 5.7px 20px rgba(52, 76, 94, 0.34);
+    color: black;
+    font-family: "Roboto";
+    font-size: 1vw;
+    font-weight: 900;
+    border: none;
+    outline: none; 
+}
+
+/* bank cards style */
+.bank-cards {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.cards-title {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.bank-card {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    will-change: transform; 
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 1.3vw;
+    width: 48%;
+    -webkit-box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.75);
+}
+
+.bank-card:hover {
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    font-size: 2vw;
+}
+
+.card-info {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.card-info p {
+    margin-bottom: 2px;
+}
+
+.card-logo {
+    padding-right: 20px;
+}
+
+.card-logo img {
+    width: 70%;
+    height: auto;
+}
+
+.read-more {
+    
+    background-color: #ffffff;
+    border: none;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.2vw;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+}
+
+.block-link {
+    display: block;
+    height: 100%;
+}
+
+/* less favorite cards style */
+.show {
+    display: none;
+}
+
+.show-blocks span {
+    border-bottom: 1px dashed #000000;
+}
+
+.show-blocks:hover {
+    cursor: pointer;
+}
+@keyframes card{
+    0% {
+        transform: scale(1);
+        /*transform: rotateZ(0deg);*/
+    }
+    50% {
+        transform: scale(1.1);
+        /*transform: rotateZ(5deg);*/
+    }
+}
+.bank-card:hover {
+    animation-name: card;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
+}
+.read-more:hover {
+    transform: scale(1.1);
+}
+
+/* -------------------------------- */
+@media screen and (max-width:768px) {
+    .item-title, .btn-select button, .read-more, .card-info {
+        font-size: 1.7vw;
+    }
+    .btn-submit button {
+        font-size: 1.3vw;
+        width: 35%
+    }
+
+    .card-content h3 {
+        font-size: 2.3vw;
+    }
+
+    .bank-card {
+        width: 95%;
+    }
+
+    .cards-title {
+        margin-bottom: 10px!important;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .block-title h2 {
+        font-size: 3.5vw;
+    }
+    .item-title, .block-title h3, .btn-select button {
+        font-size: 3vw;
+    }
+    .btn-submit button {
+        width: 50%;
+        font-size: 2vw;
+    }
+
+    .card-content h3 {
+        font-size: 3.5vw;
+    }
+
+    /* .card-logo img {
+        width: 40px;
+        height: auto;
+    } */
+
+    .card-info {
+        font-size: 3vw;
+    }
+}
+
+/* cards background color style */
+.block-type-1 {
+    /* background-color: #fdd303; */
+    background-image: linear-gradient(45deg, rgb(120, 214, 250) 0%, rgb(249, 175, 226) 100%); 
+    
+}
+
+.block-type-2 {
+    background-image: linear-gradient(45deg, rgb(0, 78, 138) 0%, rgb(0, 175, 173) 100%);     
+    color: white;
+}
+
+.block-type-3 {
+    background-image: linear-gradient(45deg, rgb(74, 72, 73) 0%, rgb(5, 5, 5) 100%);  
+    color: white;
+}
+
+.block-type-4{
+    background-image: linear-gradient(45deg, rgb(218, 117, 79) 0%, rgb(83, 120, 242) 100%); 
+    color: white;
+}
+
+.block-type-5{
+    background-image: linear-gradient(45deg, rgb(255, 0, 50) 0%, rgb(100, 0, 86) 100%); 
+    color: white;
+}
+
+.block-type-6 {
+    background-image: linear-gradient(45deg, rgb(231, 133, 62) 0%, rgb(30, 85, 160) 100%); 
+    color: white;
+}
+
+.block-type-7 {
+    background-image: linear-gradient(45deg, rgb(255, 255, 255) 0%, rgb(54, 133, 196) 100%); 
+}
+
+.block-type-8 {
+    background-image: linear-gradient(45deg, rgb(0, 117, 201) 0%, rgb(0, 187, 228) 100%); 
+    color: white;
+}
+
+.block-type-9 {
+    background-image: linear-gradient(45deg, rgb(0, 112, 60) 0%, rgb(67, 150, 57) 100%); 
+    color: white;
+}
+
+.block-type-10 {
+    background-image: linear-gradient(45deg, rgb(248, 6, 4) 0%, rgb(122, 0, 0) 100%); 
+    color: white;
+}
+
+.block-type-11 {
+    background-image: linear-gradient(45deg, rgb(100, 0, 86) 0%, rgb(41, 69, 148) 100%); 
+    color: white;
+}
+
+.block-type-12 {
+    background-image: linear-gradient(45deg, rgb(246, 94, 101) 0%, rgb(254, 179, 123) 100%); 
+}
+
+.block-type-13 {
+    background-image: linear-gradient(45deg, rgb(255, 233, 0) 0%, rgb(229, 221, 59) 100%); 
+}
+
+.block-type-14 {
+    background-image: linear-gradient(45deg, rgb(236, 29, 35) 0%, rgb(0, 83, 149) 100%); 
+    color: white;
+}
+
+.block-type-15 {
+    background-image: linear-gradient(45deg, rgb(25, 74, 146) 0%, rgb(25, 74, 146) 100%); 
+    color: white;
+}
+
+.block-type-16 {
+    background-image: linear-gradient(45deg, rgb(192, 232, 223) 0%, rgb(32, 94, 160) 100%); 
+}
+
+/* -- */
+.block-less-1 {
+    background-image: linear-gradient(45deg, rgb(221, 215, 177) 0%, rgb(221, 185, 130) 100%); 
+}
+
+.block-less-2 {
+    background-image: linear-gradient(45deg, rgb(49, 122, 190) 0%, rgb(219, 53, 46) 100%); 
+    color: white;
+}
+
+.block-less-3 {
+    background-image: linear-gradient(45deg, rgb(86, 45, 86) 0%, rgb(114, 57, 110) 100%); 
+    color: white;
+}
+
+.block-less-4 {
+    background-image: linear-gradient(45deg, rgb(0, 50, 134) 0%, rgb(56, 176, 227) 100%);
+    color: white;
+}
+
+.block-less-5 {
+    background-image: linear-gradient(45deg, rgb(251, 122, 57) 0%, rgb(3, 80, 48) 100%); 
+    color: white;
+}
+
+.block-less-6 {
+    background-image: linear-gradient(45deg, rgb(181, 181, 181) 0%, rgb(135, 135, 135) 100%); 
+}
+
+.block-less-7 {
+    background-image: linear-gradient(45deg, rgb(24, 70, 128) 0%, rgb(49, 80, 127) 100%);
+    color: white;
+}
+
+.block-less-8 {
+    background-image: linear-gradient(45deg, rgb(54, 75, 104) 0%, rgb(17, 54, 104) 100%);
+    color: white;
+}
+
+.block-less-9 {
+    background-image: linear-gradient(45deg, rgb(33, 91, 165) 0%, rgb(33, 91, 165) 100%); 
+    color: white;
+}
+
+.block-less-10 {
+    background-image: linear-gradient(45deg, rgb(21, 52, 106) 0%, rgb(21, 52, 106) 100%); 
+    color: white;
+}
+
+.block-less-11 {
+    background-image: linear-gradient(45deg, rgb(234, 50, 35) 0%, rgb(234, 45, 28) 100%); 
+    color: white;
+}
+
+.block-less-12 {
+    background-image: linear-gradient(45deg, rgb(229, 229, 229) 0%, rgb(185, 232, 169) 100%); 
+}
+
+.block-less-13 {
+    background-image: linear-gradient(45deg, rgb(242, 242, 242) 0%, rgb(198, 133, 131) 100%); 
+}
+
+.block-less-14 {
+    background-image: linear-gradient(45deg, rgb(238, 247, 251) 0%, rgb(184, 236, 249) 100%); 
+}
+
+.block-less-15 {
+    background-image: linear-gradient(45deg, rgb(30, 106, 15) 0%, rgb(255, 204, 0) 100%); 
+    color: white;
+}
+
+.block-less-16 {
+    background-image: linear-gradient(45deg, rgb(255, 130, 130) 0%, rgb(221, 17, 17) 100%); 
+    color: white;
+}
+
+.block-less-17 {
+    background-image: linear-gradient(45deg, rgb(242, 242, 242) 0%, rgb(234, 234, 234) 100%); 
+}
+
+.block-less-18 {
+    background-image: linear-gradient(45deg, rgb(249, 249, 249) 0%, rgb(204, 204, 204) 100%); 
+}
+
+.block-less-19 {
+    background-image: linear-gradient(45deg, rgb(72, 164, 165) 0%, rgb(72, 164, 165) 100%); 
+    color: white;
+}
+
+.block-less-20 {
+    background-image: linear-gradient(45deg, rgb(244, 244, 244) 0%, rgb(226, 226, 226) 100%); 
+}
+
+.block-less-21 {
+    background-image: linear-gradient(45deg, rgb(249, 249, 249) 0%, rgb(239, 239, 239) 100%); 
+}

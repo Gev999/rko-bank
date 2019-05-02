@@ -1,0 +1,280 @@
+.banks-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.banks-block {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fdd303;
+    margin-bottom: 50px;
+}
+
+.banks-inner-block {
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bank-item {
+    display: flex;
+    align-items: center;
+    /* margin-left: 50px; */
+    margin: 15px;
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    border-radius: 30px;
+    width: 200px;
+    height: 45px;
+    padding-right: 15px;
+}
+
+.checked {
+    background-color: #ffea7e;
+}
+
+.bank-item:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.bank-item img {
+    width: 30px;
+    height: auto;
+    padding-right: 15px;
+    padding-left: 40px;
+}
+
+.expand:hover {
+    background-color: inherit;
+}
+
+
+/* banks data style */
+.data-container {
+    width: 100%;
+    display: none;
+}
+
+.data-container > p {
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 5px;
+    width: 250px;
+    line-height: 1.6;
+}
+.data-row {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.fixed {
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    top: 0;
+    width: 80%;
+    display: flex;
+}
+
+.data-title {
+    display: flex;
+    align-items: center;
+    border-bottom: 2.5px solid rgb(182, 179, 179)!important;
+    padding-top: 15px;
+}
+
+.data-title img {
+    width: 50px;
+    height: auto;
+    padding-right: 20px;
+}
+
+.main-title > a {
+    text-decoration: none;
+}
+
+.main-title > p {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.data-item {
+    min-width: 33.3%;
+    max-width: 33.3%;
+    padding-left: 5px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(182, 179, 179);
+}
+
+.data-item > p {
+    width: 80%;
+    line-height: 1.6;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.submit {
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 140px;
+    height: 38px;
+    border: none;
+    border-radius: 19px;
+    background-color: #fdd303;
+    color: #010101;
+    font-size: 14px;
+    outline: none;
+}
+
+.submit:hover {
+    cursor: pointer;
+    border-radius: 19px;
+}
+
+/* scroll style */
+.top-scroll {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(233, 233, 233);
+    display: none;
+}
+
+.inner-scroll {
+    width: 90%;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(124, 124, 124);
+}
+
+/*************************************************************** AREG *************************************************************/
+.expand {
+    opacity: 0.3;
+}
+.expand p {
+    padding-left: 10px;
+    cursor: pointer;
+}
+#circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+} 
+#corner {
+    width: 5px;
+    height: 5px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%) rotate(-135deg);
+} 
+/*-stexic karas poxes ete durt chi galis metods))), aj ganlu hamarem arel*/
+#moveRight {
+    display: flex;
+    padding-left: 45px;
+    box-sizing: border-box;
+}
+#moveDown {
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+
+.hiddenBankItems {
+    display: none;
+}
+.arrows {
+    position: fixed;
+    top: 65%;
+    left: 5%;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    transform: rotate(-45deg);
+    transition: .2s;
+    cursor: pointer;
+    opacity: 0;
+}
+#arrow-left:hover , #arrow-right:hover {
+    width: 35px;
+    height: 35px;
+    transition: .2s;
+}
+#arrow-right {
+    left: 93%;
+    transform: rotate(135deg);
+}
+/* ----------------------------------- */
+    @media screen and (max-width: 997px) {
+        .bank-item {
+            margin: 0px;
+            margin-bottom: 10px; 
+            margin-top: 10px;
+        }
+    } 
+    
+    @media screen and (max-width: 900px) {
+        .data-item {
+            min-width: 50%!important;
+            max-width: 50%!important;
+        }
+
+        .arrows {
+            top: 80%;
+        }
+    }
+    
+    
+    @media screen and (max-width: 884px) {
+        .banks-inner-block {
+            justify-content: space-around;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        .data-item {
+            min-width: 100%!important;
+            max-width: 100%!important;
+        }
+    }  
+
+    @media screen and (max-width: 630px) {
+        .arrows {
+            top: 90%;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+       .arrows{
+            width: 15px;
+            height: 15px;
+        }
+        #arrow-left:hover , #arrow-right:hover {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+     @media screen and (max-width: 350px) {
+        #arrow-left,#arrow-right{
+            width: 5px;
+            height: 5px;
+        }
+        #arrow-left:hover , #arrow-right:hover {
+            width: 8px;
+            height: 8px;
+        }
+    }
